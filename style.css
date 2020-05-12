@@ -217,7 +217,7 @@ a.pure-button-primary {
 
 /* This is the class used for the dark-background areas. */
 .ribbon {
-    background: #2d3e50;
+    background: black;
     color: #aaa;
 }
 
@@ -290,4 +290,7 @@ a.pure-button-primary {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+}
+#thumbnail {
+    border: 5px solid white;
 }
