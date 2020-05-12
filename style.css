@@ -291,3 +291,6 @@ a.pure-button-primary {
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
+#thumbnail {
+    border: 5px solid white;
+}
