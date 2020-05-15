@@ -29,10 +29,12 @@ function searchIngredient(ingredient){
         var appendText = []
         $("#searchResults").empty()
         for (i = 0; i < response.drinks.length; i++){
-           var ele = $("<p>").text(response.drinks[i].strDrink)
-           ele.addClass("drink")
+           var ele = $("<a>").text(response.drinks[i].strDrink)
+           ele.attr('href', "#cocktailRecipe")
            ele.attr('id', response.drinks[i].strDrink)
-           appendText.push(ele)
+           ele.addClass("drink")
+           appendText.push(ele, "<br>")
+           
         }
         $("#searchResults").append(appendText);
     });
