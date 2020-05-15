@@ -1,14 +1,12 @@
-// <!-- ajax call "thecocktaildb.com/api/json/v1/1/filter.php?i="+ingredient -->
-    // <!--for loop
-    //     call drinks[i].strDrink
-    //  -->
 $("#search-recipes").on("click", getResults)
 $("#search-button").on("click", searchCocktail)
 $(document).on("click", ".drink",searchCard)
-// function searchForm(event){
-//     var ingredient = $(this).val()
-//     searchIngredient(ingredient)
-// }
+$("#saveButton").on("click", saveRecipe)
+function saveRecipe(event){
+    var savedCocktails = []
+    var openRecipe = document.getElementById("cocktailName")
+    console.log(openRecipe.text)
+}
 function getResults(event){
     var ingredient = $("#ingredientSearch").val().trim()
     searchIngredient(ingredient)
@@ -119,4 +117,3 @@ function findRecipe(cocktail){
     });
 
 }
-// findRecipe("Manhattan")

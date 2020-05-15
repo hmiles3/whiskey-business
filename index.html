@@ -40,7 +40,7 @@
 </div>
 
 <div class="content-wrapper">
-    <div class="content">
+    <div class="content is-center">
         <h2 id="search"></h2>
         <br>
         <br>
@@ -49,11 +49,12 @@
         <form class="searchTerms is-center" >
             <label for="ingredient">Ingredient</label><br>
             <input id = "ingredientSearch" type="text"><br>
+            <a href="#searchResults" id="search-recipes" class="pure-button     pure-button-primary">Find Recipes</a><br>
             <label for="cocktail">Cocktail</label><br>
-            <input id= "drinkSearch" type="text">
+            <input id= "drinkSearch" type="text"><br>
+            <a href="#cocktailRecipe" id="search-button" class="pure-button     pure-button-primary">Find Your Cocktail</a><br><br>
         </form>
-        <a href="#searchResults" id="search-recipes" class="pure-button     pure-button-primary">Find Recipes</a><br>
-        <a href="#cocktailRecipe" id="search-button" class="pure-button     pure-button-primary">Find Your Cocktail</a>
+        <!-- <a href="#searchResults" id="search-button" class="pure-button     pure-button-primary">Saved Cocktails</a> -->
         <div id="searchResults"></div>
         <p>
         </p>
@@ -198,31 +199,9 @@
                 <form class="pure-form pure-form-stacked">
                     <fieldset>
 
-                        <label for="email">Your Email</label>
-                        <input id="email" type="email" placeholder="Your Email">
-
-                        <label for="password">Your Password</label>
-                        <input id="password" type="password" placeholder="Your Password">
-
-                        <button type="submit" class="pure-button">Sign Up</button>
+                        <!-- <button type="submit" class="pure-button save" id="saveButton">Save Recipe</button> -->
                     </fieldset>
                 </form>
-            </div>
-
-            <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
-                <h4>Contact Us</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.
-                </p>
-
-                <h4>More Information</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.
-                </p>
             </div>
         </div>
 
