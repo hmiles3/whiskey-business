@@ -1,15 +1,50 @@
 // <!-- ajax call "thecocktaildb.com/api/json/v1/1/filter.php?i="+ingredient -->
-    // <!-- 
+    // <!--for loop
     //     call drinks[i].strDrink
     //  -->
-// <!-- ajax call "thecocktaildb.com/api/json/v1/1/search/php?s="+cocktail -->
-//     <!-- 
-//         call strDrink and saveButton
-//         call strDrinkThumb
-//         call strGlass
-//         call strIngredient[1-15] and strMeasure[1-15]
-//         call strInstructions
-//     -->
+$("#search-recipes").on("click", getResults)
+$("#search-button").on("click", searchCocktail)
+$(document).on("click", ".drink",searchCard)
+// function searchForm(event){
+//     var ingredient = $(this).val()
+//     searchIngredient(ingredient)
+// }
+function getResults(event){
+    var ingredient = $("#ingredientSearch").val().trim()
+    searchIngredient(ingredient)
+}
+function searchIngredient(ingredient){
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://the-cocktail-db.p.rapidapi.com/filter.php?i="+ingredient,
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "the-cocktail-db.p.rapidapi.com",
+            "x-rapidapi-key": "1921029623mshc3473e0fc2e5c50p1aba8fjsnfdb3fc7fd01f"
+        }
+    }
+    
+    $.ajax(settings).done(function (response) {
+        var appendText = []
+        $("#searchResults").empty()
+        for (i = 0; i < response.drinks.length; i++){
+           var ele = $("<p>").text(response.drinks[i].strDrink)
+           ele.addClass("drink")
+           ele.attr('id', response.drinks[i].strDrink)
+           appendText.push(ele)
+        }
+        $("#searchResults").append(appendText);
+    });
+}
+function searchCard(event){
+    var cocktail = $(this).attr("id")
+    findRecipe(cocktail)
+}
+function searchCocktail(event){
+    var cocktail = $("#drinkSearch").val().trim()
+    findRecipe(cocktail)
+}
 function findRecipe(cocktail){
     var settings = {
         "async": true,
@@ -24,6 +59,7 @@ function findRecipe(cocktail){
 
     
     $.ajax(settings).done(function (response) {
+        $(".drinkOutput").empty()
         $("#cocktailName").text(response.drinks[0].strDrink);
         var img = document.createElement("img");
         img.src = response.drinks[0].strDrinkThumb;
@@ -81,4 +117,4 @@ function findRecipe(cocktail){
     });
 
 }
-findRecipe("Manhattan")
+// findRecipe("Manhattan")

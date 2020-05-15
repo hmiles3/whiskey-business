@@ -294,3 +294,6 @@ a.pure-button-primary {
 #thumbnail {
     border: 5px solid white;
 }
+#cocktailThumbnail { overflow: hidden; width: 400px; height: 400px;}
+#cocktailThumbnail img { width: 100%; height: auto; }
+/* cursor property for links to get pointer finger*/
