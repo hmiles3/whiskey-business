@@ -21,12 +21,21 @@ Using Whiskey Business is easy!
 
 Once on the home page you can click the "Get Started" button and it will take you to where you can search by ingredient or by specific cocktail name. 
 
-If you would like to save your generated list of cocktails you can sign in to your gmail account using the "login" button on the top right hand side. 
+![image](images/home.png)
 
 You can also search through our Popular drink section by clicking the "Popular Cocktail's" button in the nav bar on the right hand side of the top of the page. 
 
+![image](images/popular.jpg)
+
 
 Enter your random ingredient or Cocktail by Name and then click the "Find your Cocktail" button. 
+
+![image](images/search.png)
+
+![image](images/ingriedient.png)
+
+![image](images/results.png)
+
 
 # Built Utilizing: 
 
@@ -52,4 +61,4 @@ Original Wire Frame photo here:
 
 # Idea's for Improvement: 
 
-Have an idea for improving this site? Please discuss with the original owners of the repository. Their email addresses can be found
+Have an idea for improving this site? Please discuss with the original owners of the repository. Their email addresses can be found on their github pages. 
